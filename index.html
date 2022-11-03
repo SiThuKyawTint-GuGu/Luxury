@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+  <script src="./js/app.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/pushin/dist/pushin.min.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+  <script type="text/javascript" src="//use.typekit.net/rws3een.js"></script>
+  <script type="text/javascript">
+    try {
+      Typekit.load();
+    } catch (e) {}
+  </script>
+  <script type="text/javascript" src="https://unpkg.com/pushin/dist/umd/pushin.min.js"></script>
+</head>
+
+<body>
+  <script>
+    AOS.init();
+  </script>
+  <div id="app">
+
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white position-fixed widthsize" style="z-index: 10;">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <div>
+              <input type="text" class="searchbox" placeholder="Search..">
+            </div>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div>
+            <a href="#" class="text-decoration-none"><i class="fa-solid fa-circle-user"></i><span
+                class="fontsizeone">Logo</span><i class="fa-solid fa-bag-shopping"></i></a>
+          </div>
+        </div>
+  </div>
+  </nav>
+
+  <nav class="navbar navbar-expand-lg background1 bgheader position-fixed widthsize" style="top: 50px; z-index: 10;">
+    <div class="container">
+      <a class="navbar-brand headerfont " href="#">PRICKLES & CO.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto ">
+          <li class="nav-item ">
+            <a class="nav-link active fontheader" aria-current="page" href="#shop">Shop</a>
+            <div class="hide">
+              <ul class="list-unstyled ms-3">
+                <li class="mt-2">Rings</li>
+                <li class="mt-2">Earings</li>
+                <li class="mt-2 mb-2">Necklaces</li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">FAQ</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <h4>
+            <a href="" class="typewrite" data-period="2000"
+              data-type='[ "Call Us Now! 123-456-7890", " We Deliver to Your Doorste",""]'>
+              <span class="wrap"></span>
+            </a>
+          </h4>
+        </div>
+      </div>
+  </nav>
+  </header>
+
+  <section>
+    <div class="container bgimage" style="height: 700px;">
+      <div class="row ">
+        <div class="col col-sm-12 text-center" style="margin-top: 200px;">
+          <div>
+            <p class="fontsize1 mb-0">ESTB <svg preserveAspectRatio="xMidYMid meet" class="svg"
+                data-bbox="10.326 50.3 180.129 101.208" xmlns="http://www.w3.org/2000/svg" width="130" height="130"
+                viewBox="10.326 50.3 180.129 101.208" role="presentation" aria-hidden="true">
+                <g>
+                  <path
+                    d="M105.6 52.7c-1.8-1.5-3.5-2.4-5.1-2.4-1.6.1-3.3 1-5.1 2.4-11.2 9.2-16.3 21-17 35.2-.4 7.5-1.3 14.8 10.2 12.6 1.3-.2 3.1-.2 4.3.6 1 .6 1.9 1.4 2.6 2.4 3 4.3 2.2 9.1 1 13.9-1.8 7-2.5 14.2-1.6 21.3.6 4.9-.6 13.1 5.6 12.8 6.3.3 5-7.9 5.6-12.8.9-7.2.2-14.3-1.6-21.3-1.2-4.8-2.1-9.7 1-13.9.7-.9 1.6-1.7 2.6-2.4 1.2-.8 3-.8 4.3-.6 11.5 2.1 10.6-5.2 10.2-12.6-.7-14.2-5.8-26-17-35.2z">
+                  </path>
+                  <path
+                    d="M57.6 128.4c1.5-2.3 3.7-6.5 3.6-11.2-.2-5.8-4-10.6-5.4-12.2-.3-.3-.7-.3-1 0-1.2 1.5-4.4 6.1-4.2 11.8.1 3.7 3 8.4 4.8 10.8-.2 2-.2 4 0 5.5v.2c-4.4-2.4-8.9-5.5-12.9-9.7-.1-.2-.2-.3-.4-.4-1.5-1.6-2.9-3.2-4.1-5.1-.3-.4-.5-.8-.8-1.2-.8-2.6-.5-5.5.9-7.9 2.7-.7 6.4-2.2 9.1-5.2 4-4.3 4.6-10.5 4.7-12.5 0-.4-.3-.6-.7-.6-2 .3-8 1.5-12 5.8-2.6 2.7-3.4 8.2-3.2 11.6-.7 1.3-1.2 2.8-1.4 4.2-2.5-5-4.2-10.6-4.9-16.6.1-3 1.7-5.7 3.9-6.9 2.1-.1 5.5-.6 8.1-2.7 3.2-2.6 4.2-6.9 4.5-8.7.1-.4-.2-.8-.7-.8-1.7 0-6.2.1-9.3 2.7-2.8 2.3-3.9 5.9-4.3 8-1 .7-1.9 1.6-2.5 2.6-.2-5.6.4-11.7 1.6-18.1 1.8-.5 5.6-2.1 8.1-5 3.2-3.6 3.8-8.4 3.8-10.3 0-.4-.4-.7-.8-.7-1.9.4-5.9 1.8-9.4 5.2-2.6 2.6-3.4 6.4-3.6 8.5-2 9.5-2.6 18.2-1.6 26.1v.2c-1.1-1.4-2.3-2.7-3.4-3.8-.1-2.4-.7-6.2-3.1-9.2-3.1-3.9-8.2-5.1-9.9-5.4-.3-.1-.6.2-.7.5-.1 1.7 0 6.6 3 10.4 1.8 2.3 5.7 3.9 8.3 4.6 2.5 1.7 6 6.4 6.9 9.1 1.3 5.7 3.5 10.9 6.6 15.6v.1c.3.5.6 1 .9 1.4l.9 1.2c-1.3-.4-2.7-.8-4.1-.8-.1-.2-.1-.4-.3-.6-1.9-2.3-5.4-5.6-9.1-6.2-5.6-1-10.9 1.6-12.8 2.7-.4.2-.5.8-.2 1.2 1.5 1.7 5.6 5.8 11.2 6.8 3.8.6 7.5-.4 10.1-1.4.1-.1.2-.2.3-.2 3.2-.3 7.5 2 8.4 2.7 5.5 5.9 11.9 9.8 17.6 12.4-.6.4-1.6.8-3.1 1.1-5-3.4-12.7-4-16.4-3.2-7.8 1.8-12.9 7.4-14.5 9.6-.3.4-.2.9.3 1.1 2.4 1.2 10.2 4.6 18 2.8 5.8-1.4 10.3-5.2 12.9-8.1v-.1c1.2-.2 2.3-.5 3.2-.9.9-.4 1.5-.9 1.9-1.3 7.5 3.1 13.4 4 13.9 4l.3-2.2c-.1 0-7.7-1.1-16.5-5.4-.2 0-.8-2.1-.5-5.9z">
+                  </path>
+                  <path
+                    d="M190.1 115.9c-1.9-1.1-7.3-3.7-12.8-2.7-3.7.7-7.2 3.9-9.1 6.2l-.3.6c-1.4 0-2.8.3-4.1.8l.9-1.2c.3-.5.6-1 .9-1.4v-.1c3-4.7 5.2-9.9 6.6-15.6.9-2.6 4.4-7.4 6.9-9.1 2.5-.7 6.4-2.3 8.3-4.6 3-3.8 3.1-8.7 3-10.4 0-.3-.3-.6-.7-.5-1.7.3-6.8 1.5-9.9 5.4-2.4 3-3 6.8-3.1 9.2-1.2 1-2.4 2.3-3.4 3.8v-.2c.9-7.9.4-16.6-1.6-26.1-.2-2.1-1-5.9-3.6-8.5-3.5-3.4-7.5-4.9-9.4-5.2-.4-.1-.8.2-.8.7 0 1.9.6 6.7 3.8 10.3 2.6 2.9 6.3 4.4 8.1 5 1.3 6.4 1.8 12.4 1.6 18.1-.7-1.1-1.5-2-2.5-2.6-.4-2-1.5-5.6-4.3-8-3.2-2.6-7.6-2.8-9.3-2.7-.4 0-.7.4-.7.8.3 1.7 1.3 6 4.5 8.7 2.6 2.1 6 2.6 8.1 2.7 2.2 1.2 3.7 3.9 3.9 6.9-.7 6.1-2.4 11.6-4.9 16.6-.2-1.5-.7-2.9-1.4-4.2.2-3.4-.6-8.9-3.2-11.6-4-4.2-10-5.5-12-5.8-.4-.1-.7.2-.7.6.1 2 .7 8.2 4.7 12.5 2.7 3 6.4 4.4 9.1 5.2 1.4 2.4 1.7 5.2.9 7.9-.3.4-.5.8-.8 1.2-1.3 1.8-2.7 3.5-4.1 5.1l-.4.4c-4 4.2-8.5 7.4-12.9 9.7v-.2c.2-1.6.2-3.5 0-5.5 1.8-2.4 4.7-7 4.8-10.8.2-5.7-3-10.3-4.2-11.8-.2-.3-.7-.3-1 0-1.4 1.6-5.2 6.3-5.4 12.2-.2 4.7 2.1 8.9 3.6 11.2.3 3.7-.2 5.8-.5 6.4-8.9 4.3-16.5 5.4-16.6 5.4l.3 2.2c.5-.1 6.4-.9 13.9-4 .4.4.9.9 1.9 1.3.9.4 2 .7 3.2.9v.1c2.6 2.8 7.1 6.7 12.9 8.1 7.8 1.8 15.6-1.6 18-2.8.4-.2.5-.7.3-1.1-1.6-2.2-6.7-7.8-14.5-9.6-3.7-.8-11.3-.2-16.4 3.2-1.5-.3-2.5-.7-3.1-1.1 5.7-2.6 12.1-6.6 17.6-12.4.9-.8 5.1-3 8.4-2.7.1.1.2.2.3.2 2.6 1.1 6.3 2.1 10.1 1.4 5.6-.9 9.8-5.1 11.2-6.8.4-.9.3-1.4-.1-1.7z">
+                  </path>
+                </g>
+              </svg>
+              2023
+            </p>
+          </div>
+          <div>
+            <h1 class="fontsize2">PRICKLES & CO</h1>
+          </div>
+          <div>
+            <h4 class="fontsize3">BRING AMAZING JEWELRY </h4>
+            <div>
+              <button class="btn">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop">
+    <div class="container " style="margin-top: 40px;">
+      <div class="row justify-content-sm-center  phonesize1">
+        <div class=" col-12 col-xl-4 col-sm-10 col-lg-4  ">
+          <div>
+            <div class=" gridsize">
+              <div class="position-absolute mt-4 pt-3 ">
+                <h4 class="need text-center ">RINGS</h4>
+                <p class="bg d-block mx-auto mt-3"></p>
+                <button class="btn1">Shop Collection</button>
+              </div>
+            </div>
+            <img src="image/ring.jpg" class="mx-auto d-block" style="width: 90%; height: 550px; object-fit: cover;"
+              alt="">
+          </div>
+        </div>
+        <div class="col-xl-4  col-sm-10 col-lg-4 mt-sm-5 mt-5 mt-lg-0 mt-xl-0 ">
+          <div>
+            <div>
+              <div class=" gridsize">
+                <div class="position-absolute mt-4 pt-3">
+                  <h4 class="text-center need">EARINGS</h4>
+                  <p class="bg d-block mx-auto mt-3"></p>
+                  <button class="btn1">Shop Collection</button>
+                </div>
+              </div>
+              <img src="image/earing1.jpg" class="mx-auto d-block" style="width: 90%; height: 550px; object-fit: cover;"
+                alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-12 mt-sm-5 col-sm-10 col-lg-4 mt-5 mt-xl-0 mt-lg-0">
+          <div>
+            <div>
+              <div class=" gridsize">
+                <div class="position-absolute mt-4 pt-3  ">
+                  <h4 class="text-center need">NECKLACES</h4>
+                  <p class="bg d-block mx-auto mt-3"></p>
+                  <button class="btn1">Shop Collection</button>
+                </div>
+              </div>
+              <img src="image/necklace.webp" class="mx-auto d-block"
+                style="width: 90%; height: 550px; object-fit: cover;" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container " style="margin-top: 200px;">
+      <div class="row justify-content-center">
+        <div class="col-6 border-box">
+          <h1 class="text-center text-change">Customize Your <br> Diamond</h1>
+
+          <p class="w-50 text-center d-block mx-auto  text-box">It’s here! Meet the latest innovation from our lab – a
+            huge 2ct lab-grown diamond, having a major moment in its 14k gold setting. Fire up the holiday wishlists,
+            this ones headed straight to the top.</p>
+          <div class="row">
+            <div class="col-12 box-box" data-aos-delay="50" data-aos-duration="1200" data-aos="zoom-out-right">
+              <div class="row">
+                <div class="col-6">
+                  <div class="">
+                    <img src="./public/image/logo1.webp" class="w-100 rounded-circle " alt="">
+                  </div>
+                </div>
+                <div class="col-6 box-position">
+                  <div class="">
+                    <h5 class="text-color mt-5 text-center">Magnetizing Diamonds <br> with Light</h5>
+                    <h5 class="text-bottom">LEARN MORE <i class="fa-sharp fa-solid fa-arrow-right icons"></i></h5>
+                  </div>
+                </div>
+              </div>
+              </data-aos=>
+            </div>
+
+            <div class="row">
+              <div class="col-12 box-box1" data-aos-delay="50" data-aos-duration="1200" data-aos="zoom-out-left">
+                <div class="row">
+                  <div class="col-6 box-position1">
+                    <div class="">
+                      <h5 class="text-color mt-5 text-center">Pear Aquamarine and <br> Marquise Diamond Pendant</h5>
+                      <h5 class="text-bottom"> <i class="fa-sharp fa-solid fa-arrow-left icon1"></i>LEARN MORE </h5>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="">
+                      <img src="./public/image/logo2.jpeg" class="w-100 rounded-circle " alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 box-box" data-aos-delay="50" data-aos-duration="1200" data-aos="zoom-out-right">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="">
+                      <img src="./public/image/logo6.webp" class="w-100 rounded-circle " alt="">
+                    </div>
+                  </div>
+                  <div class="col-6 box-position">
+                    <div class="">
+                      <h5 class="text-color mt-5 text-center">Carat Round Diamond <br> Stud Earrings </h5>
+                      <h5 class="text-bottom">LEARN MORE <i class="fa-sharp fa-solid fa-arrow-right icons"></i></h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 box-box1" data-aos-delay="50" data-aos-duration="1200" data-aos="zoom-out-left">
+                <div class="row">
+                  <div class="col-6 box-position1">
+                    <div class="">
+                      <h5 class="text-color mt-5 text-center">Carat Rowan Round <br> Moissanite RIng</h5>
+                      <h5 class="text-bottom"> <i class="fa-sharp fa-solid fa-arrow-left icon1"></i>LEARN MORE</h5>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="">
+                      <img src="./public/image/logo7.webp" class="w-100 rounded-circle " alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 box-end" data-aos-delay="50" data-aos-duration="1200" data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom">
+                <div>
+                  <img src="./public/image/logo3.webp" class="w-50 d-block mx-auto" alt="">
+                  <div class="">
+                    <h5 class="text-color mt-5 text-center">Classic Butterfly <br> Diamond Necklace</h5>
+                    <h5 class="text-bottom"> <i class="fa-sharp fa-solid fa-arrow-down icon1"></i></i>LEARN MORE</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section>
+    <div class="container" style="margin-top: 200px;">
+      <div class="row">
+        <div class="col-3" data-aos-delay="50" data-aos-duration="1000" data-aos="fade-down">
+          <div class="overflow-hidden">
+            <img src="./public/image/logo10.webp" class="w-100 image-effect" style="height: 400px;" alt="">
+          </div>
+          <div>
+            <h6 class="text-center mt-3 font-card">SHOP NECKLACES</h6>
+          </div>
+        </div>
+
+        <div class="col-3" data-aos-delay="50" data-aos-duration="1000" data-aos="fade-up">
+          <div class="overflow-hidden">
+            <img src="./public/image/logo12.webp" class="w-100" style="height: 400px;" alt="">
+          </div>
+          <div>
+            <h6 class="text-center mt-3 font-card">SHOP RINGS</h6>
+          </div>
+        </div>
+
+        <div class="col-3" data-aos-delay="50" data-aos-duration="1000" data-aos="fade-down">
+          <div class="overflow-hidden">
+            <img src="./public/image/logo11.webp" class="w-100" style="height: 400px;" alt="">
+          </div>
+          <div>
+            <h6 class="text-center mt-3 font-card">SHOP EARRINGS</h6>
+          </div>
+        </div>
+
+        <div class="col-3" data-aos-delay="50" data-aos-duration="1000" data-aos="fade-up">
+          <div class="overflow-hidden">
+            <img src="./public/image/logo13.webp" class="w-100" style="height: 400px;" alt="">
+          </div>
+          <div>
+            <h6 class="text-center mt-3 font-card">SHOP ENGAGEMENT</h6>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container" style="margin-top: 140px;">
+      <div class="row justify-content-center">
+        <div class="col-4">
+          <div>
+            <h6 class="text-center card-text ">FROM OUR GUESTS</h6>
+            <div class="text-center mt-4 mb-4">
+              <i class="fa-sharp fa-solid fa-star fs-7 "></i>
+              <i class="fa-sharp fa-solid fa-star  fs-7 "></i>
+              <i class="fa-sharp fa-solid fa-star  fs-7 "></i>
+              <i class="fa-sharp fa-solid fa-star  fs-7 "></i>
+              <i class="fa-sharp fa-solid fa-star  fs-7 "></i>
+            </div>
+            <p class="text-center card-text1">i love the avata key necklace so much, it has <br> become my go-to daily
+              necklace! it's super <br> simple and goes so well with anything, <br> stacked or on its own. i have
+              received so many <br> compliments while wearing it - thank you <br> bluboho!</p>
+            <p class="text-center card-text1">Isabelle C.</p>
+            <h6 class="text-center card-text1 text-decoration-underline">SHOP AVATA KEY NECKLACE</h6>
+          </div>
+        </div>
+        <div class="col-4">
+          <div>
+            <img src="./public/image/logo15.webp" class="w-100" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container phonesizescreen" style="margin-top:140px" id="about">
+      <div class="row g-0">
+        <div class="col-xl-6 col-lg-12 bg-white" style="height:450px;">
+          <div class="mt-0 mt-sm-5 mt-md-5 mt-lg-5 mt-xl-5 p-5">
+            <h3 class="fontsize4 text-center">ABOUT US</h3>
+            <p class="bg d-block mx-auto mt-3"></p>
+            <p class="fontsize5 text-center need">
+              I'm a paragraph. Click here to add your own text and edit me. It’s easy. <br> Just click “Edit Text” or
+              double click me to add your own content and <br> make changes to the font. Feel free to drag and drop me
+              anywhere you <br> like on your page. I’m a great place for you to tell a story and let your <br> users
+              know a little more about you.</p>
+            <p class="fontsize5 text-center need ">
+
+              This is a great space to write long text about your company and your <br> services. You can use this space
+              to go into a little more detail about your <br> company. Talk about your team and what services you
+              provide.</p>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+          <div>
+            <img src="image/marking ring.jpg" style="width: 100%; height: 450px;" alt="">
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+          <div>
+            <img src="image/mARK2.jpg" style="width: 100%;height: 450px;" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container mt-sm-5 mt-5 mt-xl-0 phonesizescreen ">
+      <div class="row g-0 ">
+        <div class="col-xl-6 col-lg-6">
+          <div class="">
+            <img src="image/62d0382e0997f.jpg" style="width: 100%;height: 600px; object-fit: cover;" alt="">
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 bg-white ">
+          <div class="mt-5 pt-5 boxsmsize">
+            <h1 class="text-center fontsize6">
+              BUY ONLINE <br> NOW & GET <br> 10% OFF !
+            </h1>
+            <button class="btn2 d-block mx-auto mt-5">Shop Now</button>
+          </div>
+        </div>
+        <section>
+          <div class="container bgimagesize">
+            <div class="row justify-content-center ">
+              <div class="col-xl-6 border mb-5 col-sm-8 "
+                style="background-color: rgba(255, 255, 255, 0.777); margin-top: 100px;">
+                <div>
+                  <h4 class="text-center mt-4 text1">FOR SPECIAL REQUESTS & ORDERS</h4>
+                  <form action="#">
+                    <p class="bg d-block mx-auto mt-4 mb-5"></p>
+                    <div class="d-xl-flex">
+                      <div>
+                        <label for="#" class="d-block text2">First Name*</label>
+                        <input type="text" class="boxsize mt-2">
+                      </div>
+                      <div class="ms-xl-3">
+                        <label for="#" class="d-block text2">Last Name*</label>
+                        <input type="text" class="boxsize mt-2">
+                      </div>
+                    </div>
+                    <div class="mt-2 d-block">
+                      <label for="#" class="d-block text2">Email*</label>
+                      <input type="email" class="boxsize1 mt-2">
+                    </div>
+                    <div class="mt-2">
+                      <label for="#" class="d-block text2">Phone</label>
+                      <input type="text" name="" id="" class="boxsize1 mt-2">
+                    </div>
+                    <div class="mt-2">
+                      <label for="#" class="d-block text2">Message</label>
+                      <textarea class="boxsize4" name="" id="" cols="81" rows="5" class="mt-2"></textarea>
+                    </div>
+                    <div>
+                      <button class="btnsize mt-2 mb-5 text2">Send</button>
+                    </div>
+                </div>
+                </form>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <section>
+        <div class="container bgfootercolor   bg-size" style="height: 540px;">
+          <div class="row  d-flex justify-content-center">
+            <div class="col-xl-3 col-sm-4 d-none d-sm-block d-md-block d-lg-block d-xl-block">
+              <h4 class="fontsize8 text-center">OUR STORE</h4>
+              <p class="fontsize9 mb-1 text-center mt-4">Address: 500 Terry Francois </p>
+              <p class="fontsize9 mb-1 text-center">Street San Francisco, CA 94158</p>
+              <p class="fontsize9 mb-1 text-center">Phone: 123-456-7890</p>
+              <p class="fontsize9 mb-1 text-center">Email: info@mysite.com</p>
+            </div>
+            <div class="col-xl-3 col-sm-4">
+              <h4 class="fontsize8 text-center">OPENING HOURS</h4>
+              <p class="fontsize9 mb-1 text-center mt-4">Mon - Fri: 7am - 10pm</p>
+              <p class="fontsize9 mb-1 text-center">​​Saturday: 8am - 10pm</p>
+              <p class="fontsize9 mb-1 text-center">​Sunday: 8am - 11pm</p>
+            </div>
+            <div class="col-xl-3 col-sm-4 d-none d-sm-block d-md-block d-lg-block d-xl-block">
+              <h4 class="fontsize8 text-center">HELP</h4>
+              <a href="#" class=" d-block text-center fontsize10 mt-4">Shopping and Returns</a>
+              <a href="#" class=" d-block text-center fontsize10 mt-1">Privacy Policy</a>
+              <a href="#" class=" d-block text-center fontsize10 mt-1">FAQ</a>
+            </div>
+            <div class="col-xl-12 ">
+              <div>
+                <h3 class="fontsize8 text-center">SUBSCRIBE</h3>
+              </div>
+              <div class="d-flex justify-content-center">
+                <div>
+                  <label for="#" class="fontsize11 d-block mt-2">Enter your email here*</label>
+                  <input type="email" class="boxsize2 mt-1">
+                </div>
+                <div>
+                  <button class="btn3">Subscribe Now</button>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-5 mb-5">
+                <i class="fab fa-facebook-f iconsize me-4"></i>
+                <i class="fab fa-pinterest iconsize "></i>
+                <i class="fab fa-instagram  iconsize ms-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  </section>
+  </div>
+  </div>
+  </section>
+
+  <section>
+    <div class="container phonesizescreen">
+      <div class="row">
+        <div class="col">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26639.84495173233!2d103.84131292042385!3d1.3366411560879154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssg!4v1657905746314!5m2!1sen!2ssg"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="mt-4 mb-4 ">
+      <h3 class="text-center fontsize12">© 2023 by Prickles & Co. Proudly created with <a href="#"
+          class="fontsize13">Wix.com</a>
+      </h3>
+    </div>
+  </footer>
+
+  </div>
+
+
+
+  <div class="container" style="width: 700px;margin-top:0px;">
+    <div class="container-inner">
+      <section id="images" class="wrapper">
+        <p class="images-byline text-black">Or better yet, a realistic example of showcasing some design work.</p>
+        <p class="images-byline-2 text-black">Really, anything is possible &hellip;</p>
+        <img id="mediumHomepage" class="raw-page" src="./public/image/logo16.jpg">
+        <div class="iphone">
+          <img class="iphone-frame" src="./public/image/iphoneframe.png">
+          <div class="iphone-viewport">
+            <img id="medium-profile-iphone" class="iphone-content" src="./public/image/logo17.jpg">
+            <img id="davegamache-dot-com" class="iphone-content"
+              src="public/image/Screen Shot 2022-11-02 at 09.55.20.png">
+          </div>
+        </div>
+      </section>
+      <section id="links">
+        <p class="links-byline text-black">Learn how to make your parallax site smooth like this one.</p>
+        <a class="btn" href="https://medium.com/@dhg/82ced812e61c">Read about it on Medium</a>
+      </section>
+    </div>
+  </div>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-20752697-1', 'davegamache.com');
+    ga('send', 'pageview');
+  </script>
+
+
+
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
